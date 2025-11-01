@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-const CountStore = create((set) => ({
+const Count2 = create((set) => ({
   count: 1,
   increase: () => set((state) => ({ count: state.count + 1 })),
   increaseBy: (value) =>
@@ -15,4 +15,4 @@ const CountStore = create((set) => ({
     })),
 }));
 
-export default CountStore;
+export default Count2;
