@@ -14,5 +14,5 @@ const Count2 = create((set) => ({
       count: state.count - value,
     })),
 }));
-
+// 짜증난다잉?
 export default Count2;
