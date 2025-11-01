@@ -1,5 +1,5 @@
 import React from "react";
-import countStore from "../Store/CountStore";
+import countStore from "../Store/Count2";
 
 const CountBox = () => {
   const { count } = countStore();
