@@ -1,9 +1,9 @@
 import "./App.css";
 import CountBox from "./Component/CountBox";
-import countStore from "./Store/CountStore";
+import CountStore from "./Store/CountStore";
 
 function App() {
-  const { count, increase, increaseBy, decrease, decreaseBy } = countStore();
+  const { count, increase, increaseBy, decrease, decreaseBy } = CountStore();
 
   return (
     <div>
