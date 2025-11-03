@@ -1,18 +1,26 @@
 import "./App.css";
-import CountBox from "./Component/CountBox";
-import CountStore from "./Store/Count2";
+import ContactForm from "./Component/ContactForm";
+import ContactList from "./Component/ContactList";
+import { Grid } from "@mui/material";
+import ContactSearch from "./Component/ContactSearch";
 
 function App() {
-  const { count, increase, increaseBy, decrease, decreaseBy } = CountStore();
-
+  // 왼쪽 연락처 등록 / 오른쪽 연락처 리스트와 서치창
+  // 연락처에는 전화번호 이름 추가
+  // 리스트에 아이템 몇개 잇는지
+  // 이름 검색으로 리스트를 찾을 수 있다.
   return (
     <div>
-      <h1>Count:{count}</h1>
-      <button onClick={increase}>increase</button>
-      <button onClick={decrease}>decrease</button>
-      <button onClick={()=>increaseBy(10)}>10씩 증가</button>
-      <button onClick={()=>decreaseBy(10)}>10씩 감소</button>
-      <CountBox/>
+      <h1>연락처 앱</h1>
+      <Grid container spacing={2}>
+        <Grid size={6}>
+          <ContactForm />
+        </Grid>
+        <Grid size={6}>
+          <ContactSearch />
+          <ContactList />
+        </Grid>
+      </Grid>
     </div>
   );
 }

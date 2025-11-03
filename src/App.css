@@ -1,0 +1,16 @@
+h1{
+    text-align: center;
+}
+
+.box{
+    border-left: 1px solid black;
+    padding: 1rem;
+}
+.boxIn{
+    border: 1px solid black;
+}
+.box p{
+    text-align: left;
+    margin: 0;
+    padding: 1rem;
+}
