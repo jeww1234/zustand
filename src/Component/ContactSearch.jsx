@@ -14,6 +14,11 @@ const ContactSearch = () => {
   setFilteredList(filtered);
 };
 
+const Enter = (e) =>{
+  if(e.key === "Enter"){
+    handleSearchName()
+  }
+}
 
   return (
     <Box display="flex" justifyContent="center" marginBottom="1rem">
@@ -22,6 +27,7 @@ const ContactSearch = () => {
         label="이름"
         fullWidth
         onChange={(e) => setSearchName(e.target.value)}
+        onKeyDown={(e)=>Enter(e)}
       />
       <Button variant="contained" onClick={handleSearchName}>
         검색
